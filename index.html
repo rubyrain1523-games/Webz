@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Webz</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- DESKTOP -->
+  <div id="desktop">
+    <div class="desktop-icons" id="desktop-icons">
+      <!-- icons injected by js/desktop.js -->
+    </div>
+
+    <!-- WINDOWS get injected here by js/windows.js -->
+    <div id="window-layer"></div>
+  </div>
+
+  <!-- TASKBAR -->
+  <div id="taskbar">
+    <button id="start-btn">
+      <span class="start-icon">🪟</span> Start
+    </button>
+    <div id="taskbar-items"></div>
+    <div id="clock"></div>
+  </div>
+
+  <!-- START MENU -->
+  <div id="start-menu" class="hidden">
+    <div class="start-menu-header">Webz 98</div>
+    <div class="start-menu-items" id="start-menu-items"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+  <script src="js/supabase-client.js"></script>
+  <script src="js/windows.js"></script>
+  <script src="js/sites-store.js"></script>
+  <script src="js/desktop.js"></script>
+  <script src="apps/auth.js"></script>
+  <script src="apps/notepad.js"></script>
+  <script src="apps/minesweeper.js"></script>
+  <script src="apps/snake.js"></script>
+  <script src="apps/solitaire.js"></script>
+  <script src="apps/browser.js"></script>
+  <script src="apps/builder.js"></script>
+  <script src="apps/school.js"></script>
+</body>
+</html>
