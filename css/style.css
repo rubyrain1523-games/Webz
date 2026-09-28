@@ -133,11 +133,16 @@ html, body {
 
 .window-body {
   flex: 1;
+  min-height: 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
   background: #ffffff;
   border-top: 1px solid #808080;
   margin: 3px;
-  overflow: auto;
+  overflow: hidden;
   padding: 8px;
+}
 }
 
 .window.maximized {
