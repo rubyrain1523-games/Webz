@@ -42,7 +42,7 @@ window.WebzApps.builder = {
 
       <div id="wbld-code-panel" style="flex:1; display:flex; gap:8px; min-height:0;">
         <textarea id="wbld-code" spellcheck="false" style="flex:1; font-family:'Courier New',monospace; font-size:12px; resize:none; padding:6px;"></textarea>
-        <iframe id="wbld-code-preview" sandbox="allow-scripts" style="flex:1; border:2px inset #808080; background:white;"></iframe>
+       <iframe id="wbld-code-preview" sandbox="allow-scripts" style="flex:1; min-width:0; min-height:0; border:2px inset #808080; background:white;"></iframe>
       </div>
 
       <div id="wbld-block-panel" style="flex:1; display:none; gap:8px; min-height:0;">
@@ -59,7 +59,7 @@ window.WebzApps.builder = {
           <button class="wbld-add-block" data-type="spacer">Spacer</button>
         </div>
         <div id="wbld-block-list" style="width:260px; overflow-y:auto; display:flex; flex-direction:column; gap:6px;"></div>
-        <iframe id="wbld-block-preview" sandbox="allow-scripts" style="flex:1; border:2px inset #808080; background:white;"></iframe>
+        <iframe id="wbld-block-preview" sandbox="allow-scripts" style="flex:1; min-width:0; min-height:0; border:2px inset #808080; background:white;"></iframe>
       </div>
 
       <div id="wbld-status" style="font-size:11px; color:#555; margin-top:6px; min-height:14px;"></div>
