@@ -127,16 +127,19 @@ async function visitSite(id) {
 
   const iframe = document.createElement("iframe");
   iframe.sandbox = "allow-scripts";
-  iframe.style.width = "100%";
-  iframe.style.height = "100%";
-  iframe.style.border = "none";
-  iframe.srcdoc = site.html;
+iframe.style.width = "100%";
+iframe.style.height = "100%";
+iframe.style.minWidth = "0";
+iframe.style.minHeight = "0";
+iframe.style.border = "none";
+iframe.style.display = "block";
+iframe.srcdoc = site.html;
 
-  WebzWM.createWindow({
-    title: site.name,
-    icon: "🌐",
-    width: 500,
-    height: 380,
-    content: iframe,
-  });
+WebzWM.createWindow({
+  title: site.name,
+  icon: "🌐",
+  width: 700,
+  height: 500,
+  content: iframe,
+});
 }
