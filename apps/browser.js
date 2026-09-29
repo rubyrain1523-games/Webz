@@ -133,7 +133,24 @@ iframe.style.minWidth = "0";
 iframe.style.minHeight = "0";
 iframe.style.border = "none";
 iframe.style.display = "block";
-iframe.srcdoc = site.html;
+iframe.srcdoc = `
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>WEBZ IFRAME TEST</h1>
+  <p>If you can see this, the iframe itself works.</p>
+  <button>Test Button</button>
+</body>
+</html>
+`;
 
 WebzWM.createWindow({
   title: site.name,
