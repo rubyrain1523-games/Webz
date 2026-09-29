@@ -16,7 +16,10 @@ window.WebzApps.builder = {
   icon: "🧑‍💻",
   open() {
     const wrapper = document.createElement("div");
-    wrapper.style.height = "100%";
+    wrapper.style.flex = "1 1 0";
+    wrapper.style.minWidth = "0";
+    wrapper.style.minHeight = "0";
+    wrapper.style.width = "100%";
     wrapper.style.display = "flex";
     wrapper.style.flexDirection = "column";
     wrapper.style.fontFamily = "'Tahoma', sans-serif";
@@ -40,12 +43,12 @@ window.WebzApps.builder = {
         <span id="wbld-account-status" style="font-size:11px; color:#555;"></span>
       </div>
 
-      <div id="wbld-code-panel" style="flex:1; display:flex; gap:8px; min-height:0;">
-        <textarea id="wbld-code" spellcheck="false" style="flex:1; font-family:'Courier New',monospace; font-size:12px; resize:none; padding:6px;"></textarea>
-       <iframe id="wbld-code-preview" sandbox="allow-scripts" style="flex:1; min-width:0; min-height:0; border:2px inset #808080; background:white;"></iframe>
+      <div id="wbld-code-panel" style="flex:1; display:flex; gap:8px; min-width:0; min-height:0;">
+        <textarea id="wbld-code" spellcheck="false" style="flex:1 1 0; width:0; min-width:0; min-height:0; font-family:'Courier New',monospace; font-size:12px; resize:none; padding:6px;"></textarea>
+        <iframe id="wbld-code-preview" sandbox="allow-scripts" style="flex:1 1 0; width:0; min-width:0; min-height:0; border:2px inset #808080; background:white;"></iframe>
       </div>
 
-      <div id="wbld-block-panel" style="flex:1; display:none; gap:8px; min-height:0;">
+      <div id="wbld-block-panel" style="flex:1; display:none; gap:8px; min-width:0; min-height:0;">
         <div style="width:150px; display:flex; flex-direction:column; gap:4px; overflow-y:auto;">
           <div style="font-weight:bold; margin-bottom:2px;">Add block:</div>
           <button class="wbld-add-block" data-type="heading">Heading</button>
@@ -59,7 +62,7 @@ window.WebzApps.builder = {
           <button class="wbld-add-block" data-type="spacer">Spacer</button>
         </div>
         <div id="wbld-block-list" style="width:260px; overflow-y:auto; display:flex; flex-direction:column; gap:6px;"></div>
-        <iframe id="wbld-block-preview" sandbox="allow-scripts" style="flex:1; min-width:0; min-height:0; border:2px inset #808080; background:white;"></iframe>
+        <iframe id="wbld-block-preview" sandbox="allow-scripts" style="flex:1 1 0; width:0; min-width:0; min-height:0; border:2px inset #808080; background:white;"></iframe>
       </div>
 
       <div id="wbld-status" style="font-size:11px; color:#555; margin-top:6px; min-height:14px;"></div>

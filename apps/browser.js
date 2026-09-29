@@ -12,7 +12,10 @@ window.WebzApps.browser = {
   icon: "🌐",
   open() {
     const wrapper = document.createElement("div");
-    wrapper.style.height = "100%";
+    wrapper.style.flex = "1 1 0";
+    wrapper.style.minWidth = "0";
+    wrapper.style.minHeight = "0";
+    wrapper.style.width = "100%";
     wrapper.style.display = "flex";
     wrapper.style.flexDirection = "column";
     wrapper.style.fontFamily = "'Tahoma', sans-serif";
@@ -127,36 +130,19 @@ async function visitSite(id) {
 
   const iframe = document.createElement("iframe");
   iframe.sandbox = "allow-scripts";
-iframe.style.width = "100%";
-iframe.style.height = "100%";
-iframe.style.minWidth = "0";
-iframe.style.minHeight = "0";
-iframe.style.border = "none";
-iframe.style.display = "block";
-iframe.srcdoc = `
-<!DOCTYPE html>
-<html>
-<head>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-    }
-  </style>
-</head>
-<body>
-  <h1>WEBZ IFRAME TEST</h1>
-  <p>If you can see this, the iframe itself works.</p>
-  <button>Test Button</button>
-</body>
-</html>
-`;
+  iframe.style.flex = "1 1 0";
+  iframe.style.width = "100%";
+  iframe.style.minWidth = "0";
+  iframe.style.minHeight = "0";
+  iframe.style.border = "none";
+  iframe.style.display = "block";
+  iframe.srcdoc = site.html || "";
 
-WebzWM.createWindow({
-  title: site.name,
-  icon: "🌐",
-  width: 700,
-  height: 500,
-  content: iframe,
-});
+  WebzWM.createWindow({
+    title: site.name,
+    icon: "🌐",
+    width: 700,
+    height: 500,
+    content: iframe,
+  });
 }
